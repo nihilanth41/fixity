@@ -1,0 +1,151 @@
+/* Center page headings */
+#heading { 
+	text-align: center;
+	margin-top: 30px;	
+	margin-bottom: 30px;
+}
+
+#heading a {
+	color: #000000;
+	text-decoration: none;
+}
+
+#content {
+	margin: auto;
+	width: 80%;
+}
+
+.center { 
+	margin: 0 auto;
+	width: 200px;
+}
+
+/* .main is for the index.php navigation */
+ul.main {
+  list-style-type: square;
+	margin-left: 0;
+	font-family: Verdana, sans-serif;
+}
+
+.main li { 
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+}
+
+.main a {
+	font-size: larger;
+	text-decoration: none;
+}
+
+table {
+	/* margin: auto;	 */
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td, th { 
+	padding: 0.25rem;
+	text-align: left;
+	border: 1px solid #ccc;
+}
+
+td a {
+	text-decoration: none;
+	color: #000000;
+}
+
+th { 
+	border: 1px solid black;
+}
+
+/* Color the table rows depending on status  */
+tr { background-color: #B5B5B5; } 
+.nz { background-color: rgba(255, 0, 0, 0.35); }
+.zr { background-color: rgba(0, 128, 0, 0.35); }
+.nf { background-color: rgba(0, 0, 255, 0.35); }
+
+tbody tr:nth-child(odd):not(.nz):not(.zr):not(.nf) {
+	background: #eee;
+}
+
+/* Pagination is horizontal list of links */
+.nav { 
+	text-align: center;
+}
+
+.nav ul {
+	padding: 0; 
+}
+
+.nav li {
+	display: inline-block; 
+	padding: 0 5px 0 5px; 
+}
+
+.nav a {
+	display: inline-block;
+}
+
+/* Breadcrumb related  */
+/* https://css-tricks.com/triangle-breadcrumbs/ */
+.breadcrumb { 
+	list-style: none;
+	overflow: hidden;
+}
+
+.breadcrumb li {
+	float: left;
+}
+
+.breadcrumb li a { 
+	color: white;
+	text-decoration: none;
+	padding: 10px 0 10px 55px;
+	background: brown;
+	background: hsla(34,8%,33%,1);
+	position: relative;
+	display: block;
+	float: left;
+}
+
+.breadcrumb li a:after { 
+	content: " ";
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: 50px solid transparent;
+	border-bottom: 50px solid transparent;
+	border-left: 30px solid hsla(34,8%,33%,1);
+	position: absolute;
+	top: 50%;
+	margin-top: -50px;
+	left: 100%;
+	z-index: 2;
+}
+
+.breadcrumb li:first-child a {
+	padding-left: 10px;
+}
+
+.breadcrumb li:nth-child(2) a       { background:        hsla(34,8%,45%,1); }
+.breadcrumb li:nth-child(2) a:after { border-left-color: hsla(34,8%,45%,1); }
+.breadcrumb li:nth-child(3) a       { background:        hsla(34,8%,55%,1); }
+.breadcrumb li:nth-child(3) a:after { border-left-color: hsla(34,8%,55%,1); }
+.breadcrumb li:nth-child(4) a       { background:        hsla(34,8%,65%,1); }
+.breadcrumb li:nth-child(4) a:after { border-left-color: hsla(34,8%,65%,1); }
+.breadcrumb li:nth-child(5) a       { background:        hsla(34,8%,75%,1); }
+.breadcrumb li:nth-child(5) a:after { border-left-color: hsla(34,8%,75%,1); }
+.breadcrumb li:last-child a {
+	/*background: transparent !important;*/
+	color: black;
+	pointer-events: none;
+	cursor: default;
+}
+/*.breadcrumb li:last-child a:after { border: 0; }*/
+.breadcrumb li a:hover { background: hsla(34,8%,25%,1); }
+.breadcrumb li a:hover:after { border-left-color: hsla(34,8%,25%,1) !important; }
+
+tr.nz td:nth-child(1):hover { background: rgba(255, 0, 0, 0.99); }
+tr.nf td:nth-child(1):hover { background: rgba(0, 0, 255, 0.70); }
+
+/* vim: set ts=2 sw=2 : */
